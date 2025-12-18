@@ -1,0 +1,107 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 35 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 224 71.4% 4.1%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 43.1%;
+    --accent: 180 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 35 91% 55%;
+    --radius: 0.75rem;
+
+    --chart-1: 35 91% 55%;
+    --chart-2: 180 60% 45%;
+    --chart-3: 20 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 224 71.4% 4.1%;
+    --sidebar-primary: 35 91% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14.3% 95.9%;
+    --sidebar-accent-foreground: 224 71.4% 4.1%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 35 91% 55%;
+  }
+
+  .dark {
+    --background: 220 40% 2%;
+    --foreground: 210 20% 98%;
+    --card: 220 40% 5%;
+    --card-foreground: 210 20% 98%;
+    --popover: 220 40% 2%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 35 91% 55%;
+    --primary-foreground: 224 71.4% 4.1%;
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 210 20% 60%;
+    --accent: 180 50% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 20% 12%;
+    --input: 220 20% 12%;
+    --ring: 35 91% 55%;
+
+    --chart-1: 35 91% 55%;
+    --chart-2: 180 50% 55%;
+    --chart-3: 20 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: linear-gradient(to top, hsl(220 40% 2%), hsl(220 40% 5%));
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 35 91% 55%;
+    --sidebar-primary-foreground: 224 71.4% 4.1%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 220 20% 12%;
+    --sidebar-ring: 35 91% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
